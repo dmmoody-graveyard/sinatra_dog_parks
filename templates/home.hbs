@@ -1,7 +1,5 @@
-<h1>Here are your dog parks.</h1>
-
 <ul class="list-unstyled">
-{{#each}}
-  <li class='lead'>{{parkName}}</li>
+{{#each park in model}}
+  <li class='lead'>{{#link-to 'park' park}}{{park.parkName}}{{/link-to}}</li>
 {{/each}}
 </ul>
